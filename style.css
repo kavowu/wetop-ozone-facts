@@ -1,0 +1,323 @@
+/* 自定義 CSS 樣式 */
+
+/* 全域變數 */
+:root {
+    --animation-duration: 0.3s;
+    --primary-green: #059669;
+    --primary-blue: #0284c7;
+    --text-primary: #ffffff;
+    --text-secondary: #d1d5db;
+    --bg-overlay: rgba(0, 0, 0, 0.5);
+}
+
+/* 基礎樣式重置 */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* 漸層背景動畫 */
+.bg-gradient-to-br {
+    background: linear-gradient(135deg, #064e3b, #1e3a8a, #065f46);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 淡入動畫 */
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 按鈕漣漪效果 */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: rippleEffect 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes rippleEffect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* 卡片懸停效果增強 */
+.card-hover {
+    transition: all var(--animation-duration) ease;
+    transform-origin: center;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* 導航欄樣式增強 */
+nav {
+    transition: all var(--animation-duration) ease;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* 表格樣式增強 */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+table th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+table tr {
+    transition: background-color var(--animation-duration) ease;
+}
+
+/* 滾動條樣式 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-blue));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #047857, #0369a1);
+}
+
+/* 文字選取樣式 */
+::selection {
+    background: rgba(5, 150, 105, 0.3);
+    color: white;
+}
+
+::-moz-selection {
+    background: rgba(5, 150, 105, 0.3);
+    color: white;
+}
+
+/* 響應式設計增強 */
+@media (max-width: 768px) {
+    .text-6xl {
+        font-size: 3rem;
+    }
+    
+    .text-8xl {
+        font-size: 4rem;
+    }
+    
+    .text-5xl {
+        font-size: 2.5rem;
+    }
+    
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* 手機版導航 */
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        border-top: 1px solid rgba(34, 197, 94, 0.3);
+    }
+    
+    .mobile-menu.show {
+        display: block;
+        animation: slideDown 0.3s ease;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* 高對比度模式支援 */
+@media (prefers-contrast: high) {
+    .text-gray-300 {
+        color: #ffffff;
+    }
+    
+    .text-gray-400 {
+        color: #e5e7eb;
+    }
+    
+    .border-gray-700 {
+        border-color: #ffffff;
+    }
+}
+
+/* 減少動畫偏好支援 */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .bg-gradient-to-br {
+        animation: none;
+    }
+}
+
+/* 深色模式支援 */
+@media (prefers-color-scheme: dark) {
+    /* 已經是深色主題，無需額外調整 */
+}
+
+/* 列印樣式 */
+@media print {
+    nav,
+    footer {
+        display: none;
+    }
+    
+    section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+    
+    .bg-gradient-to-br {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .text-white {
+        color: black !important;
+    }
+    
+    .text-gray-300,
+    .text-gray-400 {
+        color: #666 !important;
+    }
+}
+
+/* 焦點樣式增強 */
+button:focus,
+a:focus {
+    outline: 2px solid var(--primary-green);
+    outline-offset: 2px;
+}
+
+/* 載入動畫 */
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* 工具提示樣式 */
+.tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--animation-duration) ease;
+    z-index: 1000;
+}
+
+.tooltip:hover::before {
+    opacity: 1;
+}
+
+/* 圖片懶載入效果 */
+img {
+    transition: opacity var(--animation-duration) ease;
+}
+
+img[data-src] {
+    opacity: 0;
+}
+
+img.loaded {
+    opacity: 1;
+}
+

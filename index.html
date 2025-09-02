@@ -1,0 +1,727 @@
+    <!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臭氧真相揭密 - WETOP環境淨化技術</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Noto Sans TC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <div class="min-h-screen bg-gradient-to-br from-green-900 via-blue-900 to-emerald-800">
+        <!-- 導航欄 -->
+        <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-green-500/30">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex justify-between items-center">
+                    <div class="text-2xl font-bold text-green-500">
+                        臭氧真相揭密
+                    </div>
+                    <div class="hidden md:flex space-x-6">
+                        <button onclick="scrollToTargetTitle('hero')" class="text-white hover:text-green-400 transition-colors">首頁</button>
+                        <button onclick="scrollToTargetTitle('natural-title')" class="text-white hover:text-green-400 transition-colors">自然存在</button>
+                        <button onclick="scrollToTargetTitle('mechanisms')" class="text-white hover:text-green-400 transition-colors">自然機制</button>
+                        <button onclick="scrollToTargetTitle('myths')" class="text-white hover:text-green-400 transition-colors">破除迷思</button>
+                        <button onclick="scrollToTargetTitle('wetop-title')" class="text-white hover:text-green-400 transition-colors">WETOP技術</button>
+                        <button onclick="scrollToTargetTitle('comparison')" class="text-white hover:text-green-400 transition-colors">濃度對照</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 英雄區塊 -->
+        <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-green-900/20 to-blue-900/20"></div>
+            <div class="container mx-auto px-4 text-center relative z-10 opacity-0 translate-y-10 transition-all duration-1000" id="hero-content">
+                <div class="mb-8">
+                    <span class="inline-flex items-center bg-green-600 text-white text-lg px-4 py-2 mb-4 rounded-full">
+                        <i data-lucide="leaf" class="w-5 h-5 mr-2"></i>
+                        自然真相
+                    </span>
+                </div>
+                <h1 class="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight pl-2 md:pl-4" style="text-indent:0.5rem;">
+                    臭氧不應視作污染物
+                    <br />
+                    <span class="text-green-400" style="text-indent:0.5rem;display:inline-block;">而是自然界安全的淨化力量</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                    臭氧自地球形成以來就存在於大氣中，是大自然主動生成的淨化因子。
+                    <br />
+                    破局的關鍵是「控制」而不是「否定」。
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <button onclick="scrollToTargetTitle('natural-title')" class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg rounded-lg transition-colors">
+                        <i data-lucide="eye" class="w-5 h-5 mr-2"></i>
+                        了解自然真相
+                    </button>
+                    <button onclick="scrollToTargetTitle('wetop-title')" class="inline-flex items-center border border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg rounded-lg transition-colors">
+                        <i data-lucide="shield" class="w-5 h-5 mr-2"></i>
+                        WETOP的工程解法
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 臭氧的自然存在區塊 -->
+        <section id="natural" class="py-20 bg-black/50">
+            <div class="container mx-auto px-4">
+                <div class="mb-16">
+                    <div class="bg-white/10 border border-white/10 rounded-2xl p-6 md:p-10 text-center shadow-xl max-w-5xl mx-auto backdrop-blur-md">
+                        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+                            <span id="natural-title" class="block md:inline">臭氧的自然存在：</span>
+                            <span class="block md:inline text-green-400">地球生態系統的守護者</span>
+                        </h2>
+                        <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
+                            臭氧（O₃）自地球形成以來就存在於大氣中，是空氣的一部分
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10 md:gap-12 items-center mb-16 md:h-[480px]">
+                    <div class="flex justify-center md:justify-end items-center h-full">
+                        <div class="w-full max-w-[520px] md:max-w-[600px] lg:max-w-[680px] xl:max-w-[720px]">
+                            <img src="gBZXlMRXc90R-CdviKxFy.jpg" alt="臭氧分子結構" class="w-full h-auto rounded-2xl border border-white/10 shadow-2xl">
+                            <p class="text-center md:text-left text-gray-400 mt-3 text-sm md:text-base">臭氧(O₃)與氧氣(O₂)分子結構</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center h-full items-center">
+                        <h3 class="text-3xl font-bold text-white mb-4 text-center">大氣組成的自然成分</h3>
+                        <div class="bg-gradient-to-r from-green-600/20 to-blue-600/20 p-6 rounded-xl border border-white/10 shadow-inner w-full max-w-[520px] md:max-w-[600px] lg:max-w-[680px] xl:max-w-[720px] text-center">
+                            <div class="flex items-center justify-center mb-3">
+                                <p class="text-white text-lg font-semibold">大氣組成：</p>
+                            </div>
+                            <ul class="list-disc list-inside text-gray-200/90 space-y-2 leading-relaxed flex flex-col items-center">
+                                <li class="w-full max-w-xs"><span class="text-green-300 font-semibold">78%</span> 氮氣</li>
+                                <li class="w-full max-w-xs"><span class="text-green-300 font-semibold">21%</span> 氧氣</li>
+                                <li class="w-full max-w-xs"><span class="text-green-300 font-semibold">1%</span> 微量氣體（包含臭氧）</li>
+                                <li class="w-full max-w-xs">地面平均約 <span class="text-blue-300 font-semibold">0.04 ppm</span> 臭氧</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 hover:border-green-500 transition-all duration-300 hover:scale-105 rounded-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-blue-500">
+                                <i data-lucide="cloud-lightning" class="w-8 h-8"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-white text-xl mb-4">平流層擴散</h3>
+                        <p class="text-gray-300">
+                            臭氧層位於地表上方10-50公里，地面臭氧60-70%來自此層的自然擴散。在南極、深海等無污染地區，NOAA測得穩定的20-50 ppb基線值。
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 hover:border-green-500 transition-all duration-300 hover:scale-105 rounded-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-yellow-500">
+                                <i data-lucide="zap" class="w-8 h-8"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-white text-xl mb-4">閃電與電離作用</h3>
+                        <p class="text-gray-300">
+                            雷暴時電離氧氣形成臭氧，這就是「雨後空氣特別清新」的原因。NOAA觀測顯示可短暫提升至100 ppb，但會迅速衰減。
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 hover:border-green-500 transition-all duration-300 hover:scale-105 rounded-lg p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-green-500">
+                                <i data-lucide="leaf" class="w-8 h-8"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-white text-xl mb-4">生物來源</h3>
+                        <p class="text-gray-300">
+                            森林、海洋與植物釋放的VOCs在陽光作用下轉化為臭氧。在沿海與林區常測得30-100 ppb，證明自然環境中臭氧的存在。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <div class="bg-gradient-to-r from-green-600 to-blue-600 p-8 rounded-2xl inline-block">
+                        <h3 class="text-2xl font-bold text-white mb-4">演化的證據</h3>
+                        <p class="text-white text-lg max-w-2xl">
+                            WHO明確指出，短期暴露在≤50 ppb的臭氧濃度下，不會造成顯著健康影響。
+                            <br />
+                            <span class="font-bold text-yellow-300">
+                                生命自數億年前就在這樣的環境下繁衍，這本身就是臭氧與生物共存、相容的最佳證明。
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 自然的潔淨機制區塊 -->
+        <section id="mechanisms" class="py-20 bg-gradient-to-r from-blue-900/30 to-green-900/30">
+            <div class="container mx-auto px-4">
+                <div class="mb-16">
+                    <div class="bg-white/10 border border-white/10 rounded-2xl p-6 md:p-10 text-center shadow-xl max-w-5xl mx-auto backdrop-blur-md">
+                        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+                            自然的潔淨機制：<span class="text-green-400">雷電 vs. 太陽光</span>
+                        </h2>
+                        <p class="text-lg md:text-xl text-gray-200">
+                            地球靠兩種機制製造臭氧，但用途與對象不同
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="bg-gradient-to-br from-yellow-900/50 to-orange-900/50 border border-yellow-500 rounded-lg p-6">
+                        <div class="mb-6">
+                            <h3 class="text-yellow-400 text-2xl flex items-center">
+                                <i data-lucide="cloud-lightning" class="w-8 h-8 mr-3"></i>
+                                雷電放電 - 給植物的養分循環
+                            </h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mt-1"></i>
+                                <div>
+                                    <p class="text-white font-semibold">產生臭氧(O₃)</p>
+                                    <p class="text-gray-300">雷電電離氧氣形成臭氧</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i data-lucide="alert-triangle" class="w-6 h-6 text-yellow-500 mt-1"></i>
+                                <div>
+                                    <p class="text-white font-semibold">同時產生NO₂</p>
+                                    <p class="text-gray-300">氮氣被打斷生成氮氧化物(NOx)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i data-lucide="leaf" class="w-6 h-6 text-green-500 mt-1"></i>
+                                <div>
+                                    <p class="text-white font-semibold">植物養分</p>
+                                    <p class="text-gray-300">NOx轉化為硝酸鹽，是植物重要肥料</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i data-lucide="x-circle" class="w-6 h-6 text-red-500 mt-1"></i>
+                                <div>
+                                    <p class="text-white font-semibold">對人類有害</p>
+                                    <p class="text-gray-300">NO₂具生物毒性，可造成呼吸道與血管傷害</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-900/50 to-blue-900/50 border border-green-500 rounded-lg p-6">
+                        <div class="mb-6">
+                            <h3 class="text-green-400 text-2xl flex items-center">
+                                <i data-lucide="sun" class="w-8 h-8 mr-3"></i>
+                                太陽光照射 - 給所有生物的潔淨防護
+                            </h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mt-1"></i>
+                                <div>
+                                    <p class="text-white font-semibold">純淨臭氧</p>
+                                    <p class="text-gray-300">紫外光光解氧氣產生臭氧</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i data-lucide="shield" class="w-6 h-6 text-green-500 mt-1"></i>
+                                <div>
+                                    <p class="text-white font-semibold">不產生NO₂</p>
+                                    <p class="text-gray-300">完全避免有害副產物</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mt-1"></i>
+                                <div>
+                                    <p class="text-white font-semibold">WHO認證安全</p>
+                                    <p class="text-gray-300">≤50 ppb對人體安全，半衰期僅20-40分鐘</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i data-lucide="leaf" class="w-6 h-6 text-green-500 mt-1"></i>
+                                <div>
+                                    <p class="text-white font-semibold">全生物防護</p>
+                                    <p class="text-gray-300">大自然專門提供給全生物圈的最安全防護網</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <div class="bg-gradient-to-r from-green-600 to-blue-600 p-8 rounded-2xl inline-block">
+                        <h3 class="text-2xl font-bold text-white mb-4">分工結論</h3>
+                        <div class="grid md:grid-cols-2 gap-6 text-left">
+                            <div>
+                                <p class="text-yellow-300 font-bold">雷電路徑：</p>
+                                <p class="text-white">產生O₃ + NO₂ → 為植物提供養分，但NO₂對人類有害</p>
+                            </div>
+                            <div>
+                                <p class="text-green-300 font-bold">太陽路徑：</p>
+                                <p class="text-white">只產生O₃ → 提供所有生物可共存的潔淨防護</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 破除迷思區塊 -->
+        <section id="myths" class="py-20 bg-black/50">
+            <div class="container mx-auto px-4">
+                <div class="mb-16">
+                    <div class="bg-white/10 border border-white/10 rounded-2xl p-6 md:p-10 text-center shadow-xl max-w-5xl mx-auto backdrop-blur-md">
+                        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+                            破除迷思：<span class="text-red-400">為何社會長期錯怪臭氧？</span>
+                        </h2>
+                        <p class="text-lg md:text-xl text-gray-200">
+                            揭露「零臭氧」廣告的語言陷阱
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="space-y-6">
+                        <h3 class="text-3xl font-bold text-red-500 text-center">監測與傳播的偏差</h3>
+                        <div class="bg-gradient-to-r from-red-600/20 to-orange-600/20 p-6 rounded-xl border border-white/10 shadow-inner w-full text-center">
+                            <ul class="list-disc list-inside text-gray-200/90 space-y-3 leading-relaxed flex flex-col items-center">
+                                <li class="w-full max-w-md">
+                                    <p class="text-white font-semibold mb-1">臭氧容易測量</p>
+                                    <p class="text-gray-300">都會光化事件中，臭氧濃度容易測、易上新聞</p>
+                                </li>
+                                <li class="w-full max-w-md">
+                                    <p class="text-white font-semibold mb-1">真正誘因被忽略</p>
+                                    <p class="text-gray-300">根本誘因是 <span class="text-red-300 font-semibold">NO₂ + VOCs</span> 的累積過量，這點經常被忽略</p>
+                                </li>
+                                <li class="w-full max-w-md">
+                                    <p class="text-white font-semibold mb-1">產業話術</p>
+                                    <p class="text-gray-300">市場傾向淡化 <span class="text-red-300 font-semibold">NO₂</span> 風險，把責任推給「臭氧」本身</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="臭氧濃度.jpg" alt="NO2污染真相" class="w-full rounded-lg shadow-2xl">
+                        <p class="text-center text-gray-400 mt-4">真正該被點名的是NO₂，不是臭氧</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-red-900/30 to-orange-900/30 p-8 rounded-2xl mb-12">
+                    <h3 class="text-3xl font-bold text-white mb-6 text-center">「零臭氧」廣告的三大語言陷阱</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-black/50 border border-red-500 rounded-lg p-6">
+                            <h4 class="text-red-400 text-xl font-bold mb-4">陷阱一：空氣組成是固定的</h4>
+                            <p class="text-gray-300">
+                                地球大氣成分自古就含有微量臭氧，平均濃度20-50 ppb。這是背景值，不會因人為宣稱而消失。
+                            </p>
+                        </div>
+
+                        <div class="bg-black/50 border border-red-500 rounded-lg p-6">
+                            <h4 class="text-red-400 text-xl font-bold mb-4">陷阱二：活性物質組合固定</h4>
+                            <p class="text-gray-300">
+                                自然自潔因子包括臭氧(O₃)、過氧化氫(H₂O₂)、羥基自由基(OH•)等。差異只在比例與濃度。
+                            </p>
+                        </div>
+
+                        <div class="bg-black/50 border border-red-500 rounded-lg p-6">
+                            <h4 class="text-red-400 text-xl font-bold mb-4">陷阱三：欺騙消費者話術</h4>
+                            <p class="text-gray-300">
+                                真的「零臭氧」等於放棄自然界最強淨化因子，往往產生更危險的副產物如NO₂。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-gradient-to-r from-green-600 to-blue-600 p-8 rounded-2xl inline-block">
+                        <h3 class="text-2xl font-bold text-white mb-4">揭密結論</h3>
+                        <p class="text-white text-lg max-w-2xl">
+                            「零臭氧」不是科學安全，而是商業話術。
+                            <br />
+                            <span class="font-bold text-yellow-300">
+                                真正安全的科技，應該是回到自然規律，控制而不是否定。
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WETOP技術區塊 -->
+        <section id="wetop" class="py-20 bg-gradient-to-r from-green-900/30 to-blue-900/30">
+            <div class="container mx-auto px-4">
+                <div class="mb-16">
+                    <div class="bg-white/10 border border-white/10 rounded-2xl p-6 md:p-10 text-center shadow-xl max-w-5xl mx-auto backdrop-blur-md">
+                        <h2 id="wetop-title" class="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+                            <span class="block md:inline">WETOP的工程解法：</span>
+                            <span class="block md:inline text-green-400">讓臭氧回歸自然角色</span>
+                        </h2>
+                        <p class="text-lg md:text-xl text-gray-200">
+                            採用「太陽那條路」做工程，安全享有大自然的自潔力
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="space-y-6">
+                        <ul class="text-gray-300 space-y-3">
+                            <h3 class="text-3xl font-bold text-white text-center">WETOP的技術選擇</h3>
+                            <ul class="text-gray-300 space-y-3 flex flex-col items-center">
+                                <li class="flex items-center space-x-3 w-full max-w-md justify-center">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-1"></i>
+                                    <span>採用仿生態光離子催化技術(PICT)</span>
+                                </li>
+                                <li class="flex items-center space-x-3 w-full max-w-md justify-center">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-1"></i>
+                                    <span>模擬太陽光的自潔反應，而非雷電放電</span>
+                                </li>
+                                <li class="flex items-center space-x-3 w-full max-w-md justify-center">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-1"></i>
+                                    <span>全程控制臭氧濃度≤50 ppb</span>
+                                </li>
+                                <li class="flex items-center space-x-3 w-full max-w-md justify-center">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-1"></i>
+                                    <span>低於森林環境濃度，符合WHO/EPA建議值</span>
+                                </li>
+                        </ul>
+
+                        <div class="flex flex-col md:flex-row gap-4 justify-center items-center w-full mt-8">
+                            <div class="bg-gradient-to-br from-green-700/80 to-blue-700/60 p-6 md:p-8 rounded-2xl shadow-2xl max-w-xs w-full mb-4 md:mb-0 md:mr-2 border border-white/10 transition-all duration-300 hover:scale-105">
+                                <h4 class="text-white font-extrabold text-xl mb-2 text-center tracking-wide">完全不產生NO₂</h4>
+                                <p class="text-gray-200 text-center text-base leading-relaxed">避免真正的毒性來源，<br class='hidden md:block'>確保人機共存安全</p>
+                            </div>
+                            <div class="bg-gradient-to-br from-blue-700/80 to-green-700/60 p-6 md:p-8 rounded-2xl shadow-2xl max-w-xs w-full md:ml-2 border border-white/10 transition-all duration-300 hover:scale-105">
+                                <h4 class="text-white font-extrabold text-xl mb-2 text-center tracking-wide">權威認證</h4>
+                                <p class="text-gray-200 text-center text-base leading-relaxed">桃園機場、馬偕醫院實際應用，<br class='hidden md:block'>台灣經濟部與SGS測試背書</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full flex justify-center items-center">
+                        <div class="w-full max-w-[480px] md:max-w-[560px] lg:max-w-[640px] aspect-video rounded-lg shadow-2xl overflow-hidden">
+                            <iframe src="https://www.youtube.com/embed/8-ffZkVpjXE" title="WETOP技術影片" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-full min-h-[240px] md:min-h-[315px]"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-green-600/20 to-blue-600/20 p-8 rounded-2xl mb-12">
+                    <h3 class="text-3xl font-bold text-white mb-6 text-center">醫學應用證明臭氧安全性</h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mt-1"></i>
+                                <div>
+                                    <p class="text-white font-semibold">1902年法國醫學院博士論文記錄臭氧治療</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mt-1"></i>
+                                <div>
+                                    <p class="text-white font-semibold">德國8000名醫師長期採用臭氧療法</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mt-1"></i>
+                                <div>
+                                    <p class="text-white font-semibold">FDA與歐盟允許臭氧用於食品消毒</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-500 mt-1"></i>
+                                <div>
+                                    <p class="text-white font-semibold">新冠疫情期間歐洲醫院用於空間消毒</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center text-yellow-300 font-bold text-lg mt-6">
+                        共同點：全部建立在「濃度可控」的前提下
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <h3 class="text-3xl font-bold text-white mb-8">安全值與使用準則</h3>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-green-400 mb-2">20-50 ppb</div>
+                            <div class="text-white font-semibold mb-2">NOAA背景量</div>
+                            <div class="text-gray-300">南極/深海/偏遠山區依然測得，證明O₃為自然背景</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-blue-400 mb-2">≤50 ppb</div>
+                            <div class="text-white font-semibold mb-2">WHO/EPA建議</div>
+                            <div class="text-gray-300">日常安全範圍，>100 ppb才可能對敏感族群造成刺激</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-yellow-400 mb-2">20-40分鐘</div>
+                            <div class="text-white font-semibold mb-2">半衰期</div>
+                            <div class="text-gray-300">O₃自解為O₂，工程上採「低濃度、連續、均勻」背景層</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 臭氧濃度對照表區塊 -->
+        <section id="comparison" class="py-20 bg-gradient-to-r from-green-900/20 to-blue-900/20">
+            <div class="container mx-auto px-4">
+                <div class="mb-16">
+                    <div class="bg-white/10 border border-white/10 rounded-2xl p-6 md:p-10 text-center shadow-xl max-w-5xl mx-auto backdrop-blur-md">
+                        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+                            臭氧濃度對照表
+                        </h2>
+                        <p class="text-lg md:text-xl text-gray-200">
+                            不同環境場景下的臭氧濃度範圍與安全標準
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="bg-green-600">
+                                    <th class="px-6 py-4 text-left text-white font-bold">環境場景</th>
+                                    <th class="px-6 py-4 text-left text-white font-bold">臭氧濃度範圍</th>
+                                    <th class="px-6 py-4 text-left text-white font-bold">資料來源</th>
+                                    <th class="px-6 py-4 text-left text-white font-bold">對人體影響</th>
+                                    <th class="px-6 py-4 text-left text-white font-bold">說明</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-white">
+                                <tr class="border-b border-white/20 hover:bg-white/5">
+                                    <td class="px-6 py-4">
+                                        <div class="font-semibold">自然背景</div>
+                                        <div class="text-sm text-gray-300">（森林/海邊/雷雨後）</div>
+                                    </td>
+                                    <td class="px-6 py-4 font-bold text-green-400">30-100 ppb</td>
+                                    <td class="px-6 py-4">
+                                        <div>林清和教授研究、</div>
+                                        <div>NOAA 觀測</div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">健康</span>
+                                    </td>
+                                    <td class="px-6 py-4">生物數十億年共存；自然自潔機制的一部分</td>
+                                </tr>
+                                
+                                <tr class="border-b border-white/20 hover:bg-white/5">
+                                    <td class="px-6 py-4">南極/遠離污染地區</td>
+                                    <td class="px-6 py-4 font-bold text-green-400">20-50 ppb</td>
+                                    <td class="px-6 py-4">NOAA 研究</td>
+                                    <td class="px-6 py-4">
+                                        <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">健康</span>
+                                    </td>
+                                    <td class="px-6 py-4">即便無工業污染，仍能穩定測得</td>
+                                </tr>
+                                
+                                <tr class="border-b border-white/20 hover:bg-white/5">
+                                    <td class="px-6 py-4">都市平均值</td>
+                                    <td class="px-6 py-4 font-bold text-blue-400">30-70 ppb</td>
+                                    <td class="px-6 py-4">美國 EPA</td>
+                                    <td class="px-6 py-4">
+                                        <div class="text-yellow-400">一般人群無害；</div>
+                                        <div class="text-yellow-400">敏感族群需注意</div>
+                                    </td>
+                                    <td class="px-6 py-4">都市有 VOCs 與 NO₂，臭氧為二次生成指標</td>
+                                </tr>
+                                
+                                <tr class="border-b border-white/20 hover:bg-white/5">
+                                    <td class="px-6 py-4">
+                                        <div class="font-semibold">污染高峰</div>
+                                        <div class="text-sm text-gray-300">（光化污染事件）</div>
+                                    </td>
+                                    <td class="px-6 py-4 font-bold text-red-400">&gt;100 ppb</td>
+                                    <td class="px-6 py-4">美國 EPA</td>
+                                    <td class="px-6 py-4">
+                                        <div class="text-red-400">可能對眼睛、喉嚨、</div>
+                                        <div class="text-red-400">氣喘患者造成刺激</div>
+                                    </td>
+                                    <td class="px-6 py-4">問題源頭在 NO₂ 與 VOCs 的累積，不是臭氧本身</td>
+                                </tr>
+                                
+                                <tr class="border-b border-white/20 hover:bg-white/5">
+                                    <td class="px-6 py-4">國際安全標準</td>
+                                    <td class="px-6 py-4 font-bold text-green-400">≤50 ppb</td>
+                                    <td class="px-6 py-4">WHO、EPA</td>
+                                    <td class="px-6 py-4">
+                                        <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">長期暴露安全</span>
+                                    </td>
+                                    <td class="px-6 py-4">全球機構建議值</td>
+                                </tr>
+                                
+                                <tr class="hover:bg-white/5">
+                                    <td class="px-6 py-4 font-bold text-green-400">WETOP 控制濃度</td>
+                                    <td class="px-6 py-4 font-bold text-green-400">≤50 ppb</td>
+                                    <td class="px-6 py-4">
+                                        <div>SGS、</div>
+                                        <div>台灣經濟部專案測試</div>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">健康</span>
+                                    </td>
+                                    <td class="px-6 py-4">以仿生態 PICT 技術控制，無 NO₂ 副產物</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <div class="bg-gradient-to-r from-green-600 to-blue-600 p-8 rounded-2xl inline-block">
+                        <h3 class="text-2xl font-bold text-white mb-4">表格總結</h3>
+                        <p class="text-white text-lg max-w-3xl">
+                            從自然背景到WETOP控制濃度，都在安全範圍內。
+                            <br />
+                            <span class="font-bold text-yellow-300">
+                                問題不在臭氧濃度，而在於是否產生有害的NO₂副產物。
+                            </span>
+                            <br />
+                            WETOP採用仿生態技術，確保臭氧回歸自然角色。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 結論區塊 -->
+        <section class="py-20 bg-black/50">
+            <div class="container mx-auto px-4 text-center">
+                <div class="mb-12">
+                    <h2 class="text-5xl font-bold text-white mb-6">
+                        破除迷思，還原真相
+                    </h2>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                        <div class="bg-gray-900 border border-gray-700 hover:border-green-500 transition-all duration-300 rounded-lg p-6">
+                            <div class="text-green-500 mb-2">
+                                <i data-lucide="check-circle" class="w-8 h-8 mx-auto"></i>
+                            </div>
+                            <h3 class="text-white text-lg font-bold mb-3">臭氧一直都存在</h3>
+                            <p class="text-gray-300 text-sm">
+                                即使在南極、深海，NOAA依然測得20-50 ppb
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-900 border border-gray-700 hover:border-green-500 transition-all duration-300 rounded-lg p-6">
+                            <div class="text-yellow-500 mb-2">
+                                <i data-lucide="sun" class="w-8 h-8 mx-auto"></i>
+                            </div>
+                            <h3 class="text-white text-lg font-bold mb-3">太陽路徑最安全</h3>
+                            <p class="text-gray-300 text-sm">
+                                太陽光只產生臭氧，對所有生物安全
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-900 border border-gray-700 hover:border-green-500 transition-all duration-300 rounded-lg p-6">
+                            <div class="text-green-500 mb-2">
+                                <i data-lucide="leaf" class="w-8 h-8 mx-auto"></i>
+                            </div>
+                            <h3 class="text-white text-lg font-bold mb-3">臭氧是淨化產物</h3>
+                            <p class="text-gray-300 text-sm">
+                                大自然留給地球的天然清潔劑，不是污染物
+                            </p>
+                        </div>
+
+                        <div class="bg-gray-900 border border-gray-700 hover:border-green-500 transition-all duration-300 rounded-lg p-6">
+                            <div class="text-blue-500 mb-2">
+                                <i data-lucide="shield" class="w-8 h-8 mx-auto"></i>
+                            </div>
+                            <h3 class="text-white text-lg font-bold mb-3">WETOP讓臭氧回歸</h3>
+                            <p class="text-gray-300 text-sm">
+                                在安全濃度下成為最可靠的淨化因子
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-green-600 to-blue-600 p-12 rounded-2xl inline-block">
+                    <h3 class="text-4xl font-bold text-white mb-6">一句話的結論</h3>
+                    <p class="text-white text-2xl mb-4">
+                        臭氧 = 自然淨化產物（可控即安全）
+                    </p>
+                    <p class="text-red-300 text-2xl mb-6">
+                        NO₂ = 放電副產物（具生物毒害，必須避免）
+                    </p>
+                    <p class="text-yellow-300 text-xl font-bold">
+                        用「太陽那條路」做工程，才能在人類環境裡長期、安全地享有大自然的自潔力
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 頁腳 -->
+        <footer class="bg-black py-12">
+            <div class="container mx-auto px-4 text-center">
+                <div class="mb-8">
+                    <h3 class="text-3xl font-bold text-white mb-4">
+                        臭氧不是敵人，而是大自然最寶貴的淨化禮物
+                    </h3>
+                    <p class="text-gray-400 text-lg">
+                        破局的關鍵，是「控制」而不是「否定」
+                    </p>
+                </div>
+                
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-gray-500">
+                        © 2024 臭氧真相揭密網站 - 讓臭氧回歸自然角色，享有大自然的自潔力
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        // 平滑滾動到指定標題
+        function scrollToTargetTitle(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                // 取得 fixed 導航欄高度
+                const nav = document.querySelector('nav');
+                const navHeight = nav ? nav.offsetHeight : 0;
+                const rect = el.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const top = rect.top + scrollTop - navHeight;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+        }
+    </script>
+    <script>
+        // 初始化 Lucide 圖標
+        lucide.createIcons();
+        
+        // 頁面載入動畫
+        window.addEventListener('load', function() {
+            const heroContent = document.getElementById('hero-content');
+            setTimeout(() => {
+                heroContent.classList.remove('opacity-0', 'translate-y-10');
+                heroContent.classList.add('opacity-100', 'translate-y-0');
+            }, 500);
+        });
+    </script>
+</body>
+</html>
+
